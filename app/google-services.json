@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1032639070821",
+    "firebase_url": "https://defectos-d28f7.firebaseio.com",
+    "project_id": "defectos-d28f7",
+    "storage_bucket": "defectos-d28f7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1032639070821:android:82c277df0206c27e",
+        "android_client_info": {
+          "package_name": "wcm.jcrogar.fca.control"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1032639070821-fev2ukrhq1ib01m86hg1ajahtmsp9tn3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADI5rVNmQhC9KB7uOEaPnb8mD6OnRoWEM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
