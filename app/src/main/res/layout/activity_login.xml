@@ -10,34 +10,33 @@
         android:id="@+id/btnLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/LoginPass"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="51dp"
+        android:layout_marginTop="23dp"
         android:text="Login"
         android:onClick="loginOn"
-        />
+        android:layout_below="@+id/LoginPass"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="21dp"
+        android:layout_marginTop="51dp"
         android:gravity="center"
         android:text="Quality Control"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="24sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
     <EditText
         android:id="@+id/LoginUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="97dp"
         android:ems="10"
         android:hint="User"
-        android:inputType="textPersonName"
+        android:inputType="textEmailAddress"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true" />
 
@@ -45,13 +44,10 @@
         android:id="@+id/LoginPass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
         android:ems="10"
         android:inputType="textPassword"
         android:layout_below="@+id/LoginUser"
         android:layout_alignLeft="@+id/LoginUser"
-        android:layout_alignStart="@+id/LoginUser"
-        android:layout_alignRight="@+id/LoginUser"
-        android:layout_alignEnd="@+id/LoginUser" />
+        android:layout_alignStart="@+id/LoginUser" />
 
 </RelativeLayout>

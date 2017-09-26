@@ -8,6 +8,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -37,13 +40,9 @@ public class login extends AppCompatActivity {
                 }else{
                     Toast.makeText(login.this, "El usuario salio de la sesion", Toast.LENGTH_SHORT).show();
                 }
-
-
             }
         };
-
     }
-
     @Override
     protected void onStart() {
         super.onStart();
@@ -60,8 +59,23 @@ public class login extends AppCompatActivity {
     }
 
     public void loginOn(View view) {
-        Intent intentlogin = new Intent(this, access.class);
-        startActivity(intentlogin);
-        Toast.makeText(this, "Successful", Toast.LENGTH_SHORT).show();
+    String username = UserEdit.getText().toString();
+    String password = PassEdit.getText().toString();
+    firebaseAuth.signInWithEmailAndPassword(username, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+        @Override
+        public void onComplete(@NonNull Task<AuthResult> task) {
+          /*  if(UserEdit.equals("") && PassEdit.equals("")){
+                Toast.makeText(login.this, "Ha dejado campos vacios", Toast.LENGTH_SHORT).show();
+            }else*/
+                if (!task.isSuccessful()) {
+                    Toast.makeText(login.this, "Verifique su Usuario y Password", Toast.LENGTH_LONG).show();
+                } else {
+                    Intent intentF = new Intent(login.this, access.class);
+                    startActivity(intentF);
+                }
+
+        }
+    });
+
     }
 }
